@@ -1,0 +1,22 @@
+/* miniprogram/pages/dayInfo/dayInfo.wxss */
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.weatherImg {
+  width:300rpx;
+  height: 300rpx;
+}
+.weatherText {
+  font-size: 40rpx;
+}
+
+.others {
+  margin-top:40rpx;
+}
+
+.other-item {
+  margin:30rpx 0;
+}

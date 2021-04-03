@@ -1,0 +1,21 @@
+<!--miniprogram/pages/dayInfo/dayInfo.wxml-->
+<view class="container">
+  <view class="date">{{date}}</view>
+  <!-- <view class="location">{{location}}</view> -->
+  <view class="weatherInfo">
+    <view class="temp">{{tempMin}}°C ~ {{tempMax}}°C</view>
+    <view class="weatherIcon">
+      <image class="weatherImg" src="../../images/weatherIcon/{{weatherIcon}}.png"></image>
+      <view class="weatherText">{{weatherText}}</view>
+    </view>
+    <view class="others">
+      <view class="other-item sun">
+        <text>日出:{{sunrise}} </text>
+        <text>日落:{{sunset}} </text>
+      </view>
+      <view class="other-item uvIndex">紫外线强度: {{uvIndex}}</view>
+      <view class="other-item windDir">风向: {{windDirDay}}</view>
+      <view class="other-item windScale">风力: {{windScaleDay}}</view>
+    </view>
+  </view>
+</view>

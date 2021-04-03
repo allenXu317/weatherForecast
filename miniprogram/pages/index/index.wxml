@@ -1,0 +1,52 @@
+<!--miniprogram/pages/index/index.wxml-->
+<!-- <view class="title">天气预报测试</view> -->
+<view class="container">
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="picker">
+      {{region[0]}} {{region[1]}} {{region[2]}}
+    </view>
+  </picker>
+  <view class="date">{{date}}</view>
+  <view class="item temp">{{temp}}    {{weatherText}}</view>
+  <view class="item weather-icon">
+    <image class="item weather-code" src="../../images/weatherIcon/{{weatherCode}}.png">
+      {{weatherCode}}
+    </image>
+  </view>
+  <view class="item others">
+    <view class="others-item">
+      湿度
+      <view class="val">{{humidity}}</view>
+    </view>
+    <view class="others-item">
+      气压
+      <view class="val">{{pressure}}</view>
+    </view>
+    <view class="others-item">
+      能见度
+      <view class="val">{{vis}}</view>
+    </view>
+    <view class="others-item">风向
+      <view class="val">
+        {{windDir}}
+      </view>
+    </view>
+    <view class="others-item">风速<view class="val">
+        {{windSpeed}}
+      </view></view>
+    <view class="others-item">风力<view class="val">
+        {{windScale}}
+      </view></view>
+  </view>
+  <view class="item weather-3d">
+    <view  class="day-weather" bindtap="getDayInfo" data-index="{{index}}" wx:for="{{days}}">
+      <view class="futrue-date" style="font-size:25rpx">{{item.date}}</view>
+      <view class="future-weather">
+        <image class="future-weather-img" src="../../images/weatherIcon/{{item.iconDay}}.png"></image>
+        <!-- <view>{{item.textDay}}</view>
+        <view></view> -->
+        <view style="font-size:25rpx">{{item.tempMin}}°C ~ {{item.tempMax}}°C</view>
+      </view>
+    </view>
+  </view>
+</view>
